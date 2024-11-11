@@ -1,0 +1,1420 @@
+/* General styling */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+  box-sizing: border-box;
+  background-color: #f0f9f4;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+
+
+
+/* navbar          */
+.custom-navbar {
+  background-color: #0f3403;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 20px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.navbar-brand {
+  color: white;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand .logo {
+  width: 40px;
+  margin-right: 10px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-links ul {
+  display: flex;
+  list-style-type: none;
+}
+
+.navbar-links ul li {
+  margin-left: 20px;
+}
+
+.navbar-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navbar-links .contact-info {
+  color: white;
+  margin-left: 30px;
+}
+
+/* Navbar toggler (Hamburger icon) */
+.navbar-toggler {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.navbar-cross {
+  font-size: 30px;
+  cursor: pointer;
+  display: none; /* Initially hidden */
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 500px;
+  
+
+}
+/* Hidden checkbox to toggle dropdown visibility */
+.navbar-toggle-checkbox {
+  display: none;
+}
+
+
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none; /* Hide the navbar links by default on mobile */
+    width: 100%;
+    flex-direction: column;
+    text-align: center;
+    
+   
+  }
+
+  /* Show the navbar links when checkbox is checked */
+  .navbar-toggle-checkbox:checked ~ .navbar-links {
+    display: flex; /* Make the navbar links visible */
+  }
+
+  /* Hamburger icon visible on mobile */
+  .navbar-toggler {
+    display: block;
+  }
+  .navbar-cross{
+    display: none;
+  }
+
+  .navbar-links ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    
+  }
+
+  .navbar-links ul li {
+    margin: 10px 0;
+  }
+}
+.navbar-toggle-checkbox:checked + .navbar-toggler + .navbar-cross + .navbar-links {
+  display: flex;
+}
+
+/* Hide the hamburger icon when checkbox is checked */
+.navbar-toggle-checkbox:checked + .navbar-toggler {
+  display: none;
+}
+
+/* Show the "X" icon when the checkbox is checked */
+.navbar-toggle-checkbox:checked + .navbar-toggler + .navbar-cross {
+  display: block;
+}
+
+.navbar-cross {
+  font-size: 30px;
+  cursor: pointer;
+  color: white;
+  display: none; /* Hidden until checkbox is checked */
+}
+
+@media (min-width: 769px) {
+  /* Laptop/desktop styles */
+  .navbar-links {
+
+
+    display: flex; /* Navbar links are always visible on large screens */
+  }
+
+  .navbar-links ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .navbar-links ul li {
+    margin-left: 20px;
+  }
+
+  .navbar-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+}
+/* Default layout for larger screens (laptop and desktop) */
+.mission-vision-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Image on the right for larger screens */
+.mission-image {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 2s ease-in-out; /* Image animation */
+}
+
+/* Content on the left */
+.about-section_containt {
+  width: 55%;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.section-title {
+  font-size: 2em !important;
+  font-family: "Poppins", sans-serif;
+  color: #8b0000 !important; /* Dark red for emphasis */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-left: 5px solid #8b0000; /* Accent line */
+  padding-left: 10px;
+}
+
+/* Paragraph styling */
+.about-section_containt p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Highlighted text */
+.highlighted-text {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.about-section_containt p strong {
+  font-weight: bold;
+  color: #333; /* Dark gray emphasis */
+}
+
+/* Mobile responsiveness: Image above text on small screens */
+@media (max-width: 768px) {
+  .mission-vision-section {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center the content */
+    padding: 20px;
+  }
+
+  .mission-image {
+    width: 100%; /* Full width on mobile */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .about-section_containt {
+    width: 100%; /* Full width on mobile */
+    text-align: center;
+  }
+}
+
+.about-para{
+  margin-left:50px;
+  padding-left: 20px;
+}
+@media (max-width: 768px) {
+  .about-para{
+    margin-left:0px;
+    padding-left: 0;
+  }
+}
+
+
+/* General Styles */
+
+
+  /* Show the navbar links when hamburger is clicked */
+  .navbar-links.active {
+    display: flex;
+  }
+
+  /* Hamburger icon visible on mobile */
+  /* .navbar-toggler {
+    display: block;
+  } */
+
+  /* Modify the dropdown links to be centered when displayed */
+  .dropdown-links ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+  }
+
+  .dropdown-links ul li {
+    margin: 10px 0;
+  }
+
+
+  /* When hamburger icon is clicked, show dropdown links */
+  .navbar-toggler.active + .dropdown-links {
+    display: flex;
+  }
+
+
+@media (min-width: 769px) {
+  /* Laptop/desktop styles */
+  .dropdown-links {
+    display: none;
+  }
+
+  /* Navbar links display normally on large screens */
+  .navbar-links {
+    display: flex;
+  }
+
+  .navbar-links ul {
+    display: flex;
+    list-style-type: none;
+  }
+
+  .navbar-links ul li {
+    margin-left: 20px;
+  }
+
+  .navbar-links ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+} 
+ 
+
+
+
+
+/* header */
+.header-top{
+  /* background-image: url(assets/welcomeSection.gif); */
+  width: 100%;
+  height: 600px; 
+  background-size:cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+}
+.welcomeSection-img{
+  padding-left: 30px;
+
+}
+/* Banner container */
+.banner-content-top {
+  max-width: 60%;
+  padding-left: 20px;
+  color: rgb(2, 39, 9); /* Text color */
+
+  
+}
+
+/* Styling for the h2 */
+.banner-content-top h2 {
+  font-size: 3em;
+  margin: 0 0 10px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase; /* Uppercase text */
+}
+
+/* Styling for the main h1 */
+.banner-content-top h1 {
+  font-size: 4empx;
+  font-weight: bold;
+  margin: 0;
+  font-weight: bold;
+  text-transform: uppercase; /* Uppercase text */
+}
+
+/* Styling for the h3 (subheading) */
+.banner-content-top h3 {
+  background-color: rgb(2, 39, 9);
+  color: white;
+  padding: 10px;
+ padding-right: 20px;
+  display: inline-block;
+  font-size: 2em;
+  margin: 15px 0;
+  font-style: italic;
+}
+
+/* Styling for the paragraph */
+.banner-content-top p {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 800px; /* Set maximum width */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Styling for the button */
+.btn.main-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ff6600; /* Button color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+/* Hover effect for the button */
+.btn.main-btn:hover {
+  background-color: #e65c00; /* Darker shade on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header-top{
+    display: block;
+  }
+  .banner-content-top {
+    max-width: 100%;
+  }
+  .welcomeSection-img{
+    padding-left: 0px;
+
+  }
+  .banner-content-top {
+    padding: 40px 15px; /* Adjust padding on smaller screens */
+  }
+
+  .banner-content-top h1 {
+    font-size: 2em; /* Slightly smaller font for h1 on mobile */
+  }
+
+  .banner-content-top h2 {
+    font-size: 1em; /* Smaller font size for h2 */
+  }
+
+  .banner-content-top h3 {
+    font-size: .8em; /* Smaller font size for h3 */
+  }
+
+  .banner-content-top p {
+    font-size: 14px; /* Smaller font size for paragraphs */
+    padding: 0 10px; /* Padding on sides for mobile view */
+  }
+
+  .btn.main-btn {
+    font-size: 12px; /* Smaller button text */
+    padding: 8px 16px; /* Smaller padding for buttons */
+  }
+}
+
+
+
+
+/* Header Styling */
+header {
+  background-image: url("assets/bg_header.webp"); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 20vh; /* Compact header height */
+  width: 100vw; /* Full width */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  overflow: hidden; /* Ensure no content goes outside the header */
+}
+
+/* Background overlay for contrast */
+header::before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3); /* Subtle dark overlay */
+  z-index: 1;
+}
+
+/* Header content */
+.header-content {
+  text-align: center;
+  z-index: 2; /* Ensure content is above the overlay */
+  padding: 5px;
+  width: 100%; /* Ensure it stays within the header width */
+}
+
+/* Logo Styling */
+.logo {
+  width: 60px; /* Adjusted size */
+  height: auto;
+  margin-bottom: 5px;
+}
+
+/* Elegant Slogan Styling */
+.slogan {
+  font-size: 0.9em; /* Smaller slogan font */
+  margin: 5px 0;
+  font-family: "Mukti Narrow", sans-serif; /* Hindi font */
+  color: #f0ead6; /* Soft beige or off-white to complement the background */
+}
+
+/* Elegant Company Name Styling */
+.company-name {
+  font-size: 1.3em; /* Slightly larger for an elegant look */
+  font-family: "Playfair Display", serif; /* Elegant serif font */
+  text-transform: uppercase;
+  margin: 0;
+  letter-spacing: 1px;
+  color: #f0ead6; /* Soft beige */
+  font-weight: bolder;
+}
+
+/* About Section */
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Image on the left */
+.about-image {
+  /* width: 40%; */
+  animation: fadeIn 2s ease-in-out; /* Image animation */
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+
+ 
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+/* Content on the right */
+.about-content {
+  width: 55%;
+  padding-left: 20px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.welcome-message {
+  font-size: 2.2em;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2em !important;
+  font-family: "Poppins", sans-serif;
+  color: #8b0000 !important; /* Dark red for emphasis */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-left: 5px solid #8b0000; /* Accent line */
+  padding-left: 10px;
+}
+
+.about-content h3 {
+  font-size: 2em !important;
+  font-family: "Poppins", sans-serif;
+  color: #8b0000 !important; /* Dark red for emphasis */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-left: 5px solid #8b0000; /* Accent line */
+  padding-left: 10px
+}
+
+/* Paragraph styling with design improvements */
+.about-content p {
+  display: flex;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #666;
+}
+
+/* Emphasized paragraph styling */
+.about-content p:nth-child(3),
+.about-content p:nth-child(5) {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+.about-content p strong {
+  font-weight: bold;
+  color: #333; /* Dark gray emphasis */
+}
+/* gallery */
+/* Container for the gallery section */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Section header styling */
+.header {
+  padding-bottom: 30px;
+}
+
+.section-title {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+
+
+
+/* best selling products */
+
+/* Container for the section */
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+/* Title and subtitle */
+.custom-title-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.custom-section-title {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.custom-section-subtitle {
+  font-size: 1.2em;
+  color: #666;
+}
+
+/* Product row and columns */
+.custom-product-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.custom-product-col {
+  flex: 1 1 calc(25% - 20px); /* Four columns in a row */
+  margin-bottom: 30px;
+  box-sizing: border-box;
+  max-width: calc(25% - 20px); /* For responsiveness */
+  padding: 0 10px;
+}
+
+/* Product card */
+.custom-product-card {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.custom-product-card:hover {
+  transform: scale(1.2)
+}
+
+/* Image and styling */
+.custom-product-img {
+  margin-bottom: 15px;
+}
+
+.custom-img-fluid {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Product info */
+.custom-product-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.custom-product-info h3 {
+  font-size: 1.5em;
+  margin-bottom: 5px;
+}
+
+.custom-product-info span {
+  font-size: 1em;
+  color: #555;
+}
+
+/* Button styling */
+.custom-product-detail {
+  margin-top: 10px;
+}
+
+.custom-main-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.custom-main-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  .custom-product-col {
+    flex: 1 1 calc(50% - 20px); /* Two columns in a row on medium screens */
+    max-width: calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .custom-product-col {
+    flex: 1 1 calc(100% - 20px); /* One column in a row on small screens */
+    max-width: calc(100% - 20px);
+    
+  }
+}
+@media screen and (max-width:768px){
+  .about-section{
+    margin-top: 170px;
+  }
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* happy coustumer */
+
+
+/* Hide radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Carousel container */
+.custom-carousel {
+  display: flex;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.custom-carousel-item {
+  min-width: 100%;
+  transition: transform 0.6s ease-in-out;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+input#slide1:checked ~ .custom-carousel .custom-carousel-item:nth-child(1),
+input#slide2:checked ~ .custom-carousel .custom-carousel-item:nth-child(2),
+input#slide3:checked ~ .custom-carousel .custom-carousel-item:nth-child(3) {
+  opacity: 1;
+  position: relative;
+}
+
+.custom-carousel-navigation {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.custom-prev, .custom-next {
+  cursor: pointer;
+  padding: 10px;
+  background-color: #47484a;
+  color: white;
+  border-radius: 100%;
+  margin: 10px;
+  font-size: 24px;
+}
+
+.custom-prev:hover, .custom-next:hover {
+  background-color: #a1a5aa;
+}
+
+/* Style your section as needed */
+.custom-testimonial-section {
+  padding: 50px;
+  background-color: #E8F5E9;
+}
+
+.custom-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.custom-header {
+  padding-bottom: 20px;
+}
+
+.custom-testimonial-row {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  
+
+}
+
+.custom-profile-box {
+  flex: 1;
+  padding: 20px;
+  background-color: #03262c;
+}
+
+.custom-profile-image {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.custom-testimonial-card {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: right;
+  padding: 20px;
+
+  ;
+  /* margin-left: 20px; */
+  /* border-radius: 10px; */
+}
+
+/* .custom-desc-box {
+  position: relative;
+} */
+
+.custom-customer-details{
+  font-size: 2em;
+
+}
+ .custom-quote-icon {
+ 
+  right: 10px;
+  bottom: 10px;
+  width: 50px;
+} 
+
+
+
+
+
+
+/* Gallery grid styles */
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Individual image item styling */
+.image-item {
+  flex: 1 1 calc(33.33% - 20px);
+  box-sizing: border-box;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Hover effect for the images */
+.image:hover {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .image-item {
+    flex: 1 1 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .image-item {
+    flex: 1 1 100%;
+  }
+}
+
+
+
+/* Fade-in and slide-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Image comes in from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(20px); /* Text comes in from the right */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Mission and Vision Section */
+.mission-vision-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  background-color: #f9f9f9; /* Light background for a clean look */
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+/* Mission content styling */
+.mission-content {
+  width: 55%;
+  padding-right: 20px;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.section-title {
+  font-size: 2em;
+  font-family: "Poppins", sans-serif;
+  color: #8b0000; /* Dark red for emphasis */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-left: 5px solid #8b0000; /* Accent line */
+  padding-left: 10px;
+}
+
+.mission-content p {
+  
+  line-height: 1.8;
+  padding: 20px; margin-bottom: 15px;
+  font-size: 1.1em;
+  color: #555; /* Softer text color for readability */
+}
+.about-section_containt{
+padding-left: 20px;
+}
+
+.highlighted-text {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  font-style: italic;
+}
+
+/* Image styling */
+.mission-image {
+  /* width: 40%; */
+  animation: fadeIn 2s ease-in-out; /* Smooth image fade-in */
+}
+
+.mission-image img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Fade-in and slide-in animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward motion */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Text slides in from the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Factory Facility Section */
+.factory-facility {
+  padding: 40px;
+  background-color: #f4f4f4; /* Light gray background for contrast */
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 2em;
+  color: #8b0000; /* Dark red for a strong title */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  border-bottom: 2px solid #8b0000; /* Underline for emphasis */
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-left: 20px;
+}
+
+/* Layout for text and image */
+.factory-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;  
+  gap: 20px;
+  flex-wrap: wrap; /* Wrap for responsiveness */
+}
+
+/* Factory address styling */
+.factory-text {
+  width: 60%;
+  font-size: 1.1em;
+  color: #333; /* Darker gray for readability */
+  line-height: 1.8;
+}
+
+.address-unit {
+  margin-bottom: 15px;
+}
+
+.unit-label {
+  font-weight: bold;
+  color: #444; /* Slightly darker gray for emphasis */
+}
+
+.factory-text p {
+  margin: 5px 0;
+  background: #fff; /* White background for text */
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for text block */
+}
+
+/* Image styling */
+.factory-image-wrapper {
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; /* Make sure the wrapper takes the full height of the section */
+  min-height: 300px; /* Optional: Ensure a minimum height for the image container */
+}
+
+.factory-image {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  animation: fadeIn 2s ease-in-out; /* Smooth fade-in animation */
+  object-fit: cover; /* Ensure the image maintains aspect ratio and fills the wrapper */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Slight upward motion */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (max-width: 768px) {
+  .factory-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the content */
+  }
+
+  .factory-text, .factory-image-wrapper {
+    width: 100%; /* Ensure both text and image take full width on small screens */
+  }
+
+  .factory-image-wrapper {
+    order: -1; /* Show the image above the text */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+}
+
+/* Contact Us Section */
+.contact-us-section {
+  padding: 40px;
+  background-color: #f5f5f5; /* Light background for contrast */
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.section-title {
+  font-size: 2em;
+  color: #4a4a4a; /* Neutral dark color for the title */
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #8b0000; /* Dark red underline */
+  display: inline-block;
+}
+
+/* Flex container for contact info and image */
+.contact-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Contact details card */
+.contact-details {
+  width: 45%;
+}
+
+.contact-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  padding: 20px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-icon {
+  font-size: 1.5em;
+  margin-right: 10px;
+  color: #8b0000; /* Dark red for icons */
+}
+
+.contact-info {
+  font-size: 1.2em;
+  color: #333;
+}
+
+.contact-info a {
+  text-decoration: none;
+  color: #8b0000; /* Dark red for links */
+  transition: color 0.3s ease;
+}
+
+.contact-info a:hover {
+  color: #006400; /* Change to green on hover */
+}
+
+/* Image styling */
+.contact-image-wrapper {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInUp 2s ease-in-out; /* Fade-in animation */
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align the content */
+  }
+
+  .contact-image-wrapper {
+    order: -1; /* Show the image above the contact details */
+    width: 100%; /* Full width for better mobile layout */
+    margin-bottom: 20px; /* Add space below the image */
+  }
+
+  .contact-details {
+    width: 100%; /* Full width for better readability */
+  }
+
+  .contact-card {
+    padding: 10px; /* Reduce padding for mobile */
+  }
+
+  .contact-info {
+    font-size: 1em; /* Adjust font size for mobile */
+  }
+}
+
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.products-section {
+  padding: 20px;
+}
+
+.product-filters {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.filter-btn {
+  padding: 10px 15px;
+  background-color: #8b0000;
+  color: white;
+  border: none;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.filter-btn:hover {
+  background-color: #006400;
+}
+
+.products-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.product-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 5px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden; /* Ensures no content goes outside the card */
+}
+
+/* Hover Effect for Product Card */
+.product-card:hover {
+  transform: translateY(-10px) scale(1.03); /* Slight move up and scaling effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deepens shadow on hover */
+}
+
+.product-card:hover img {
+  transform: scale(1.05); /* Slight zoom-in on the image */
+  transition: transform 0.3s ease; /* Smooth image transition */
+}
+.product-card img {
+  max-width: 100%; /* Ensure image fits within the card */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+/* Remove link styling for product name and product summary */
+.product-card a {
+  text-decoration: none; /* Removes underline */
+  color: inherit; /* Inherits the color from parent elements */
+}
+
+/* Additional styling for hover effect (optional) */
+.product-card a:hover {
+  color: inherit; /* Ensure no color change on hover */
+}
+
+/* You can customize font styles further if needed */
+.product-name,
+.product-summary {
+  font-size: 1.1em;
+  color: #333; /* A more neutral color for the text */
+}
+
+.product-summary {
+  font-size: 0.9em;
+  color: #666;
+}
+
+/* Ensures that product cards start hidden and are shown by JS */
+.product-card {
+  display: none;
+}
+/* slider */
+.slider {
+  overflow: hidden;
+  width:100%;
+  height: 100%;
+  position: relative;
+ }
+  
+ .slider .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+ 
+  width: 100%;
+  height: 80%;
+  background-size: cover;
+  background-position: center;
+  animation: slider 12.5s infinite;
+ }
+  
+ .slider .slide:nth-child(1) {
+    background-image: url('assets/kisan0.gif');
+    animation-delay: 0s;
+ }
+ 
+ .slider .slide:nth-child(2) {
+    background-image: url('assets/kisan1.jpg');
+    animation-delay: -2.5s;
+ }
+ 
+ .slider .slide:nth-child(3) {
+    background-image: url('assets/kisan2.jpg');
+    animation-delay: -5s;
+ }
+ 
+ .slider .slide:nth-child(4) {
+    background-image: url('assets/kisan0.jpg');
+    animation-delay: -7.5s;
+ }
+ 
+ .slider .slide:nth-child(5) {
+    background-image: url('assets/kisan2.jpg');
+    animation-delay: -10s;
+ }
+ 
+ @keyframes slider {
+  0%, 16%, 100% {
+    transform: translateX(0);
+    animation-timing-function: ease;
+  }
+  20% {
+    transform: translateX(-100%);
+    animation-timing-function: step-end;
+  }
+  96% {
+    transform: translateX(100%);
+    animation-timing-function: ease;
+  }
+ }
+ 
